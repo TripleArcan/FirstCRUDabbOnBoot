@@ -1,16 +1,17 @@
-package com.example.FirstCRUDappOnSpringBoot.servise;
+package com.example.FirstCRUDappOnSpringBoot.dao;
 
 import com.example.FirstCRUDappOnSpringBoot.model.User;
-import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+public interface UserDao {
 
-
-public interface UserService {
     List<User> getAllUsers();
 
-    public void addUser(User user);
+
+    void addUser(User user);
+
 
     void deleteUser(Long id);
 

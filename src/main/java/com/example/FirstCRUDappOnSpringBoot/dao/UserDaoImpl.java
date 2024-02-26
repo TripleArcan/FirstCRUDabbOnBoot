@@ -1,7 +1,6 @@
 package com.example.FirstCRUDappOnSpringBoot.dao;
 
 import com.example.FirstCRUDappOnSpringBoot.model.User;
-import com.example.FirstCRUDappOnSpringBoot.servise.UserService;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Component;
@@ -12,8 +11,7 @@ import java.util.List;
 
 
 @Repository
-@Component
-public class UserServiceDAO implements UserService {
+public class UserDaoImpl implements UserDao {
 
     @PersistenceContext
     private EntityManager entityManager;
